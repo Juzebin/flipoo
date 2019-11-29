@@ -1,0 +1,275 @@
+%%
+%% This is file `tikzposter-template.tex',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% tikzposter.dtx  (with options: `tikzposter-template.tex')
+%%
+%% This is a generated file.
+%%
+%% Copyright (C) 2014 by Pascal Richter, Elena Botoeva, Richard Barnard, and Dirk Surmann
+%%
+%% This file may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either
+%% version 2.0 of this license or (at your option) any later
+%% version. The latest version of this license is in:
+%%
+%% http://www.latex-project.org/lppl.txt
+%%
+%% and version 2.0 or later is part of all distributions of
+%% LaTeX version 2013/12/01 or later.
+%%
+
+
+\documentclass{tikzposter} %Options for format can be included here
+
+\usepackage{todonotes}
+
+\usepackage[tikz]{bclogo}
+\usepackage{lipsum}
+\usepackage{amsmath}
+
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage[absolute]{textpos}
+\usepackage[it]{subfigure}
+\usepackage{graphicx}
+\usepackage{cmbright}
+%\usepackage[default]{cantarell}
+%\usepackage{avant}
+%\usepackage[math]{iwona}
+\usepackage[math]{kurier}
+\usepackage[T1]{fontenc}
+
+
+%% add your packages here
+\usepackage{hyperref}
+% for random text
+\usepackage{lipsum}
+\usepackage[english]{babel}
+\usepackage[pangram]{blindtext}
+
+\colorlet{backgroundcolor}{blue!10}
+
+ % Title, Author, Institute
+\title{FLIP00 FINAL PRESENTATION}
+\author{Zebin Ju}
+\institute{Xi'an Shiyou University, China
+}
+%\titlegraphic{logos/tulip-logo.eps}
+
+%Choose Layout
+\usetheme{Wave}
+
+%\definebackgroundstyle{samplebackgroundstyle}{
+%\draw[inner sep=0pt, line width=0pt, color=red, fill=backgroundcolor!30!black]
+%(bottomleft) rectangle (topright);
+%}
+%
+%\colorlet{backgroundcolor}{blue!10}
+
+\begin{document}
+
+
+\colorlet{blocktitlebgcolor}{blue!23}
+
+ % Title block with title, author, logo, etc.
+\maketitle
+
+\begin{columns}
+ % FIRST column
+\column{0.5}% Width set relative to text width
+
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+ %\block{Main Objectives}{
+%  	      	\begin{enumerate}
+%  	      	\item Formalise research problem by extending \emph{outlying aspects mining}
+%  	      	\item Proposed \emph{GOAM} algorithm is to solve research problem
+%  	      	\item Utilise pruning strategies to reduce time complexity
+%  	      	\end{enumerate}
+%%  	      \end{minipage}
+%}
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+
+
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+\block{Introduction}{
+%You are given 5 years of store-item sales data, and asked to predict 3 months of sales for 50 different items at 10 different stores.
+Many social programs today have difficulty ensuring that adequate assistance is provided to the right people. This is especially tricky when a project focuses on the poorest. The poorest people in the world are often unable to provide the necessary income and expenditure records to prove that they are eligible. In Latin America, we need to qualify for revenue. It is referred to as agent means test (or PMT). Through PMT, agents use a model, which can analyze the needs of their families by considering the observable family properties, such as the materials of walls and ceilings, or the assets found in their homes. Although this is an improvement, accuracy remains a problem as the population of the region grows and poverty decreases.
+\vspace{1cm}
+\begin{description}
+  \item [1] - extreme poverty
+  \item [2] - moderate poverty
+  \item [3] - vulnerable households
+  \item [4] - non vulnerable households
+\end{description}
+}
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+
+
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+\block{Data Visualization}{
+%By using matplotlib to describe the data.And Observe the relationship between different features.
+The figure below shows the distribution of the data. We can see that the average education level of both male and female heads of households with poverty level of 1: extreme extreme extreme poverty is the lowest. With the increase of education level, the poverty level has declined, and it can be seen that the edu and the pot are inversely proportional. No matter which level of poverty families.% the average level of female heads of households is the lowest All of them have slightly higher education level than male heads of household.
+\vspace{1cm}
+%\begin{center}
+  %\includegraphics[width=.5\linewidth]{E:/tulip-flip/templatex-master/powerdot-tuliplab/logos/0003.eps}
+  %\quad\includegraphics[width=.3\linewidth]{E:/pictures/f1.eps}
+  %\quad\includegraphics[width=.3\linewidth,height=.2\linewidth]{E:/tulip-flip/templatex-master/powerdot-tuliplab/logos/0006.eps}	
+  %\quad\includegraphics[width=.3\linewidth,height=.2\linewidth]{E:/tulip-flip/templatex-master/powerdot-tuliplab/logos/0007.eps}
+  \quad\includegraphics[width=.3\linewidth,height=.2\linewidth]{E:/pictures/f1.eps}
+  \quad\includegraphics[width=.3\linewidth,height=.25\linewidth]{E:/pictures/f2.eps}
+  \quad\includegraphics[width=.3\linewidth,height=.25\linewidth]{E:/pictures/f3.eps}
+%\end{center}
+}
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+
+
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+
+%\note{Note with default behavior}
+
+%\note[targetoffsetx=12cm, targetoffsety=-1cm, angle=20, rotate=25]
+%{Note \\ offset and rotated}
+
+ % First column - second block
+
+
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+\block{Pearson Correlation Coefficient}{
+  %Through the data visualization before, we can intuitively recognize the changes in sales. However, to forecast sales for the 
+  %next three months, we need to extract some new features. From the previous figure we can see that the sales are related to the
+  %characteristics of the year, month, season, etc., so we can add some new features.
+  In statistics, Pearson correlation coefficient is used to measure the correlation between two variables X and y, and its value is between - 1 and 1. 
+  When learning the correlation measure, there is a coefficient to measure the similarity (distance). This coefficient is called Pearson coefficient. In fact, it has been learned in statistics, but I didn't know it could be used in machine learning at that time, which makes me feel that machine learning can't do without statistics.
+  \vspace{1cm}
+  %\begin{description}
+   % \item[dayofweek]- The day of the week. Monday is indicated by 0, Tuesday is indicated by 1, and so on.
+   % \item[is\_weekend]-  Determine if this day is a weekend. 
+   % \item[day]- The day of the month.
+   % \item[year]- Judging year. 
+   % \item[dayofyear]- The day of the year.
+    %\item[weekofyear] - The week of the year.
+    %\item[sales\_mean\_lag\_90]-Calculate 90 days from the day before, and then start from this day, the average of the first seven days.
+    %\item[sales\_std\_lag\_90]-  Calculate 90 days from the day, and then start from this day, the standard deviation of the first seven days. 
+  %\end{description} 
+  %\begin{center}
+    %\quad\includegraphics{E:/pictures/person.eps}
+  %\end{center}
+}
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+
+
+% SECOND column
+\column{0.5}
+
+ %Second column with first block's top edge aligned with with previous column's top.
+
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+\block{Algorithm}{
+%There are many machine learning methods for solving regression problems. This moment I will chose the lightGBM model.
+%The lightGBM is light Gradient Boosting Machine which is a gradient boosting framework that uses tree based learning algorithms. 
+%\begin{description}
+ % \item  Faster training speed and higher efficiency.
+ % \item  Lower memory usage.
+  %\item  Better accuracy.
+ % \item  Support of parallel and GPU learning.
+  %\item  Capable of handling large-scale data
+%\end{description}
+Random forest is a classifier that uses multiple trees to train and predict samples. In machine learning, random forest is a classifier with multiple decision trees, and the output category is determined by the mode of the output category of individual tree. Random forest is an algorithm that integrates multiple trees through the idea of integrated learning. Its basic unit is decision tree, and its essence belongs to a big branch of machine learning integrated learning method.
+\vspace{1.5cm}
+%Choosing the SMAPE as Evaluate model
+%\[SMAPE=\frac{100\%}{n}\sum_{t=1}^n\frac{|F_t-A_t|}{(|A_t|+|F_t|)/2} \]
+}
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+% Second column - first block
+
+
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+\block[titleleft]{Forcasting result}
+{
+  From the predicted results, we can see that the number of people belonging to label four, that is, non vulnerable families is the 
+most.The advantages of random forest are: for many kinds of data, it can produce a classifier with high accuracy; it can deal with a large number of input variables; it can evaluate the importance of variables when deciding the category; it can produce an unbiased estimation of the error after generalization internally when building the forest; it contains a good method to estimate the missing data, and If a large part of the data is lost, the accuracy can still be maintained; it provides an experimental method to detect variable interactions; for unbalanced classification data sets, it can balance the error; it calculates the closeness in each case, which is very useful for data mining, outlier detection and data visualization; use the above. It can be extended to unlabeled data, which usually use unsupervised clustering. It can also detect deviaters and view data; the learning process is very fast.
+\vspace{2cm}
+  \begin{center}
+    %\includegraphics[width=.4\linewidth,height=.4\linewidth]{E:/tulip-flip/templatex-master/powerdot-tuliplab/logos/012.eps}
+    %\quad\includegraphics[width=.4\linewidth,height=.4\linewidth]{E:/pictures.result.eps}
+    %\quad\includegraphics[width=.4\linewidth,height=.4\linewidth]{E:/pictures.result.eps}	
+    \includegraphics[width=.3\linewidth]{E:/pictures/result.eps}
+  \end{center}
+}
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+
+
+% Second column - second block
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+\block[titlewidthscale=1, bodywidthscale=1]
+{Conclusion}
+{
+  \begin{description}
+    \item The data preprocessing part is very important, which is the basis to solve the later problems. In this part, data processing should be considered comprehensively.
+    \vspace{1cm}
+    \item Random forest is a very flexible and practical method, which has excellent accuracy and can run effectively on large data sets. 
+    \vspace{1cm}
+    \item Drawing is also very important. You can clearly see the relationship between data.
+    %\item[Prospcting] I woule like to select multiple models for comparison later.
+  \end{description}
+}
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+
+
+% Bottomblock
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+\colorlet{notebgcolor}{blue!20}
+\colorlet{notefrcolor}{blue!20}
+\note[targetoffsetx=8cm, targetoffsety=-4cm, angle=30, rotate=15,
+radius=2cm, width=.26\textwidth]{
+Acknowledgement
+\begin{itemize}
+    \item
+    Thank you
+ \end{itemize}
+}
+
+%\note[targetoffsetx=8cm, targetoffsety=-10cm,rotate=0,angle=180,radius=8cm,width=.46\textwidth,innersep=.1cm]{
+%Acknowledgement
+%}
+
+%\block[titlewidthscale=0.9, bodywidthscale=0.9]
+%{Acknowledgement}{
+%}
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+
+\end{columns}
+
+
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+%[titleleft, titleoffsetx=2em, titleoffsety=1em, bodyoffsetx=2em,%
+%roundedcorners=10, linewidth=0mm, titlewidthscale=0.7,%
+%bodywidthscale=0.9, titlecenter]
+
+%\colorlet{noteframecolor}{blue!20}
+\colorlet{notebgcolor}{blue!20}
+\colorlet{notefrcolor}{blue!20}
+\note[targetoffsetx=-13cm, targetoffsety=-12cm,rotate=0,angle=180,radius=8cm,width=.96\textwidth,innersep=.4cm]
+{
+\begin{minipage}{0.3\linewidth}
+\centering
+\includegraphics[width=24cm]{logos/tulip-wordmark.eps}
+\end{minipage}
+\begin{minipage}{0.7\linewidth}
+{ \centering
+  FLIP00 FINAL PRESENTATION
+  26/11/2019, Xi'an, China
+}
+\end{minipage}
+}
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+
+
+\end{document}
+
+%\endinput
+%%
+%% End of file `tikzposter-template.tex'.

@@ -1,0 +1,261 @@
+% 
+% ---------------------------------------------------------------
+% Copyright (C) 2012-2018 Gang Li
+% ---------------------------------------------------------------
+%
+% This work is the default powerdot-tuliplab style test file and may be
+% distributed and/or modified under the conditions of the LaTeX Project Public
+% License, either version 1.3 of this license or (at your option) any later
+% version. The latest version of this license is in
+% http://www.latex-project.org/lppl.txt and version 1.3 or later is part of all
+% distributions of LaTeX version 2003/12/01 or later.
+%
+% This work has the LPPL maintenance status "maintained".
+%
+% This Current Maintainer of this work is Gang Li.
+%
+%
+
+\documentclass[
+ size=12pt,
+ paper=smartboard, %a4paper, smartboard, screen
+ mode=present, %present, handout, print
+ display=slides, % slidesnotes, notes, slides
+% nohandoutpagebreaks,
+% pauseslide,
+style=tuliplab,
+% nopagebreaks,clock
+% hlentries=true,
+% hlsections = true,
+pauseslide,
+fleqn,leqno]{powerdot}
+
+\hypersetup{pdfpagemode=FullScreen}
+% \usepackage[toc,highlight,blackslide,slidesonly,sounds,HA]{HA-prosper}
+
+\usepackage{amssymb}
+\usepackage{amsmath} 
+\usepackage{rotating}
+\usepackage{graphicx}
+\usepackage{boxedminipage}
+\usepackage{media9}
+\usepackage{rotate}
+\usepackage{calc}
+\usepackage[absolute]{textpos}
+\usepackage{psfrag,overpic}
+\usepackage{fouriernc}
+\usepackage{pstricks,pst-node,pst-text,pst-3d,pst-grad}
+\usepackage{moreverb,epsfig,color,subfigure}
+\usepackage{color}
+\usepackage{pstricks}
+\usepackage{pstricks-add}
+\usepackage{pst-text}
+\usepackage{pst-node, pst-tree}
+\usepackage{booktabs}
+\usepackage{etex}
+\usepackage{breqn}
+\usepackage{multirow}
+\usepackage{gitinfo2}
+
+\usepackage{listings}
+\lstset{frameround=fttt, 
+frame=trBL, 
+stringstyle=\ttfamily,
+backgroundcolor=\color{yellow!20},
+basicstyle=\footnotesize\ttfamily}
+\lstnewenvironment{code}{
+\lstset{frame=single,escapeinside=`',
+backgroundcolor=\color{yellow!20},
+basicstyle=\footnotesize\ttfamily}
+}{}
+
+
+\usepackage{fouriernc}
+\usepackage{hyperref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% title
+% TODO: Customize to your Own Title, Name, Address
+%
+\title{Flip00 Project Final Presentation}
+\author{
+Zebin Ju
+\\
+Xi'an Shiyou University 
+% \href{mailto:gangli@acm.org}{gangli@acm.org}
+% \and % more authors
+}
+\date{\today}
+
+
+% Customize the setting of slides
+\pdsetup{
+% theslide=\arabic{slide}~/~\pageref*{lastslide},
+% theslide=\arabic{slide},
+rf=\href{http://www.tulip.org.au}{
+Last Changed by: \textsc{\gitCommitterName}\ \gitVtagn-\gitAbbrevHash\ (\gitAuthorDate)
+},
+cf={Flip00 Project Final  Presentation},
+}
+%trans=Fade,
+%list={labelsep=1em,leftmargin=*,itemsep=0pt,topsep=5pt,parsep=0pt},
+% counters={theorem,lemma},
+% randomdots,dmaxdots=80
+%}
+
+
+\begin{document}
+
+\maketitle 
+%\begin{slide}[toc=,bm=]{Overview}
+  %\tableofcontents[content=currentsection,type=1]
+  %\end{slide}
+  \section{Problem Description}
+  %\begin{slide}{Description}
+  %\begin{center}
+    
+  %\end{center}
+  %\tableofcontents[content=currentsection,type=1]
+  %\end{slide}
+  \begin{slide}{Description}
+     \setlength{\parindent}{1.5em}
+     Many social programs today have difficulty ensuring that adequate assistance is provided to the right people. This is especially tricky when a project focuses on the poorest. The poorest people in the world are often unable to provide the necessary income and expenditure records to prove that they are eligible. We need to find an algorithm to predict the poverty level of families.
+  \end{slide}
+
+  %\begin{slide}[toc=,bm=]{Overview}
+    \tableofcontents[content=sections]%用于大标题
+    %\end{slide}
+    \section{Problem Analysis}
+    \begin{slide}{Data Analysis}
+        The data is divided into two files: train.csv and test.csv.\\
+        %\begin{center}
+          \begin{itemize}
+            \item Key fields:\\
+            %\begin{itemize}
+           % \setlength{\parindent}{1.5em}
+            \item ID: an identification of each sample data\\
+        %\setlength{\parindent}{1.5em}
+\item Idhogar: the unique identification of each family\\
+%\setlength{\parindent}{1.5em}
+\item Parentesco1: identify whether the member is the head of the household\\
+%\setlength{\parindent}{1.5em}
+\item Target: poverty of families\\
+%\setlength{\parindent}{1.5em}
+\item 1 for  extreme poverty\\
+%\setlength{\parindent}{1.5em}
+\item 2 for  moderate poverty\\
+%\setlength{\parindent}{1.5em}
+\item 3 for  vulnerable households\\
+%\setlength{\parindent}{1.5em}
+\item 4 for non vulnerable households\\
+%\end{itemize}
+\end{itemize}
+%\end{center}
+
+    %\tableofcontents[content=currentsection,type=1]
+    \end{slide}
+
+    \begin{slide}[toc=,bm=]{Data Glance}
+     \begin{figure}[ht]
+      \centering
+      \includegraphics[scale=1.4]{E:/pictures/f3.eps}
+      \caption{data characteristics table}
+      \end{figure}
+    \end{slide}
+    \begin{slide}{Explore Tags }
+      \setlength{\parindent}{1.5em}
+      Target is the tag information of each family. Next, observe the distribution information of target. You need to filter out the data of parentecso1 = = 1, parentecso = 1, which means that the family member is the head of a family (a family has only one head of a family). Therefore, the target of the family member with parentecso = 1 is the target of the whole family.
+      
+      
+     
+      \begin{figure}[ht]%插入图片
+        \centering%用于居中
+        \includegraphics[scale=0.5]{E:/pictures/f2.eps}
+        \caption{poverty level distribution}%图片标题
+        \end{figure} 
+
+    \end{slide} 
+\begin{slide}{Addressing Wrong Target}
+  \setlength{\parindent}{1.5em}
+  The normal situation is: if the target of a family is extreme, that is to say, the target of the member who is the head of the family is extreme, then the target of all members in the family should be the same extreme. However, in some abnormal situations, members belonging to the same family have multiple different targets, which may be caused by human or other factors.
+
+First, find families with different family member labels. Then, we can correct all the label differences by assigning the label of the head of household to everyone in the same household. For a family without a head of household, we don't need to worry. If a family does not have a head of household, then there will be no real label and no training will be conducted with any family without a head.
+  \vspace{1cm}
+  
+\end{slide}
+
+\begin{slide}{Missing Value Handling}
+  \setlength{\parindent}{1.5em}
+  Only look at the existing data, with the most cases as a reference.
+\vspace{0.9cm}
+
+\end{slide}
+
+\begin{slide}{Education,Labels,Gender} 
+
+
+\setlength{\parindent}{1.5em}
+Next, let's look at the relationship between the education level of different age groups and the poverty situation through the box chart.
+\begin{figure}[ht]%插入图片
+  \centering%用于居中
+  \includegraphics[scale=0.9]{E:/pictures/f1.eps}
+  \caption{relation diagram}%图片标题
+  \end{figure}
+    
+
+\end{slide}
+\begin{slide}{Pearson correlation coefficient}
+  \setlength{\parindent}{1.5em}
+  In statistics, Pearson correlation coefficient is used to measure the correlation between two variables X and y, and its value is between - 1 and 1.
+  \begin{figure}[ht]%插入图片
+    \centering%用于居中
+    \includegraphics[scale=1.0]{E:/pictures/pearson.eps}
+    \caption{forecast result chart}%图片标题
+    \end{figure}
+\vspace{1cm}
+
+  
+\end{slide}
+
+
+\tableofcontents[content=sections]
+\section{Method}
+    \begin{slide}{Method}
+      \setlength{\parindent}{1.5em}
+      \begin{itemize}
+        \item RandomForestClassifier
+      \end{itemize}
+      
+      Random forest is a classifier that uses multiple trees to train and predict samples. In machine learning, random forest is a classifier with multiple decision trees, and the output category is determined by the mode of the output category of individual tree.
+     
+    \end{slide}
+
+
+\tableofcontents[content=sections]
+\section{Result}
+    \begin{slide}{Forecast Result}
+      \setlength{\parindent}{1.5em}
+      From the predicted results, we can see that the number of people belonging to label four, that is, non vulnerable families is the most.
+      \begin{figure}[ht]%插入图片
+        \centering%用于居中
+        \includegraphics[scale=0.9]{E:/pictures/result.eps}
+        \caption{forecast result chart}%图片标题
+        \end{figure}
+    \end{slide}
+
+
+
+%\begin{slide}[toc=,bm=]{Aknowledge}
+  %\tableofcontents[content=sections]
+  %\end{slide}
+  \section{The Ending}
+  %\begin{slide}[toc=,bm=]{Aknowledge}
+ %\tableofcontents[content=currentsection,type=1]
+  %\end{slide}
+%\begin{slide}{Aknowledge}
+%\centering
+%{Thanks for watching} 
+%\end{slide}
+
+\end{document}
+\endinput

@@ -1,0 +1,14 @@
+\pdcontentsline{1}{2}{Problem Description}
+\pdcontentsline{0}{3}{Description}
+\pdcontentsline{1}{4}{Problem Analysis}
+\pdcontentsline{0}{5}{Data Analysis}
+\pdcontentsline{0}{7}{Explore Tags }
+\pdcontentsline{0}{8}{Addressing Wrong Target}
+\pdcontentsline{0}{9}{Missing Value Handling}
+\pdcontentsline{0}{10}{Education,Labels,Gender}
+\pdcontentsline{0}{11}{Pearson correlation coefficient}
+\pdcontentsline{1}{12}{Method}
+\pdcontentsline{0}{13}{Method}
+\pdcontentsline{1}{14}{Result}
+\pdcontentsline{0}{15}{Forecast Result}
+\pdcontentsline{1}{16}{The Ending}
